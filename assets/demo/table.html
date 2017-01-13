@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>表格</title>
+    <link href="../style/styleRJ.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="dom/docs.min.css">
+
+</head>
+
+<body>
+<div class="container">
+    <div class="bs-docs-section">
+        <h1 id="tables" class="page-header">表格</h1>
+
+        <h2 id="tables-example">基本实例</h2>
+        <p>为任意 <code>&lt;table&gt;</code> 标签添加 <code>.table</code> 类可以为其赋予基本的样式 — 少量的内补（padding）和水平方向的分隔线。这种方式看起来很多余！？但是我们觉得，表格元素使用的很广泛，如果我们为其赋予默认样式可能会影响例如日历和日期选择之类的插件，所以我们选择将此样式独立出来。</p>
+        <div class="bs-example">
+            <table class="table">
+                <caption>Optional table caption.</caption>
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                </tbody>
+            </table>
+        </div><!-- /example -->
+
+
+        <h2 id="tables-striped">条纹状表格</h2>
+        <p>通过 <code>.table-striped</code> 类可以给 <code>&lt;tbody&gt;</code> 之内的每一行增加斑马条纹样式。</p>
+        <div class="bs-example">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                </tbody>
+            </table>
+        </div><!-- /example -->
+
+
+
+        <h2 id="tables-bordered">带边框的表格</h2>
+        <p>添加 <code>.table-bordered</code> 类为表格和其中的每个单元格增加边框。</p>
+        <div class="bs-example">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td rowspan="2">1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@TwBootstrap</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                </tbody>
+            </table>
+        </div><!-- /example -->
+
+
+
+        <h2 id="tables-hover-rows">鼠标悬停</h2>
+        <p>通过添加 <code>.table-hover</code> 类可以让 <code>&lt;tbody&gt;</code> 中的每一行对鼠标悬停状态作出响应。</p>
+        <div class="bs-example">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                </tbody>
+            </table>
+        </div><!-- /example -->
+
+
+
+        <h2 id="tables-condensed">紧缩表格</h2>
+        <p>通过添加 <code>.table-condensed</code> 类可以让表格更加紧凑，单元格中的内补（padding）均会减半。</p>        <div class="bs-example">
+            <table class="table table-condensed">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                </tbody>
+            </table>
+        </div><!-- /example -->
+
+
+
+        <h2 id="tables-contextual-classes">状态类</h2>
+        <p>通过这些状态类可以为行或单元格设置颜色。</p>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <colgroup>
+                    <col class="col-xs-1">
+                    <col class="col-xs-7">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>Class</th>
+                    <th>描述</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <code>.active</code>
+                    </td>
+                    <td>鼠标悬停在行或单元格上时所设置的颜色</td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>.success</code>
+                    </td>
+                    <td>标识成功或积极的动作</td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>.info</code>
+                    </td>
+                    <td>标识普通的提示信息或动作</td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>.warning</code>
+                    </td>
+                    <td>标识警告或需要用户注意</td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>.danger</code>
+                    </td>
+                    <td>标识危险或潜在的带来负面影响的动作</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="bs-example">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Column heading</th>
+                    <th>Column heading</th>
+                    <th>Column heading</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="active">
+                    <td>1</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                </tr>
+                <tr class="success">
+                    <td>3</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                </tr>
+                <tr class="info">
+                    <td>5</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                </tr>
+                <tr class="warning">
+                    <td>7</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                </tr>
+                <tr class="danger">
+                    <td>9</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                </tr>
+                </tbody>
+            </table>
+        </div><!-- /example -->
+
+
+        <h2 id="tables-responsive">响应式表格</h2>
+        <p>将任何 <code>.table</code> 元素包裹在 <code>.table-responsive</code> 元素内，即可创建响应式表格，其会在小屏幕设备上（小于768px）水平滚动。当屏幕大于 768px 宽度时，水平滚动条消失。</p>
+
+        <div class="bs-example">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Table heading</th>
+                        <th>Table heading</th>
+                        <th>Table heading</th>
+                        <th>Table heading</th>
+                        <th>Table heading</th>
+                        <th>Table heading</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div><!-- /.table-responsive -->
+
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Table heading</th>
+                        <th>Table heading</th>
+                        <th>Table heading</th>
+                        <th>Table heading</th>
+                        <th>Table heading</th>
+                        <th>Table heading</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div><!-- /.table-responsive -->
+        </div><!-- /example -->
+
+    </div>
+
+</div>
+
+
+</body>
+</html>
+
+
+

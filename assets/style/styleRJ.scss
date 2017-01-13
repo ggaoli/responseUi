@@ -1,0 +1,61 @@
+//  Core variables and mixins
+@import "styleRJ/variables";//定义变量，方便后面调用
+@import "styleRJ/mixins";//定义混合 这类似定义函数或者宏，在mixins文件夹中可看到所定义的函数
+
+// Reset and dependencies
+@import "styleRJ/normalize";//标准化css，这是一个专门将不同浏览器的默认css特性设置为统一效果的css库
+@import "styleRJ/print";//打印样式
+
+
+// Core CSS
+@import "styleRJ/scaffolding"; //脚手架，相当于全局样式
+@import "styleRJ/type";//排版样式
+@import "styleRJ/code";//代码样式
+@import "styleRJ/grid";//栅格系统
+@import "styleRJ/tables";//表格样式
+@import "styleRJ/forms";//表单样式
+@import "styleRJ/buttons";//按钮样式
+
+
+// Components
+@import "styleRJ/component-animations";//组件中折叠和隐藏动画
+@import "styleRJ/button-groups";//按钮组
+@import "styleRJ/dropdowns";//下拉菜单及下三角符号
+@import "styleRJ/input-groups";//输入框组
+@import "styleRJ/breadcrumbs";//面包屑
+@import "styleRJ/pagination";//默认分页
+
+@import "styleRJ/pager";//翻页
+@import "styleRJ/labels";//标签
+@import "styleRJ/badges";//徽章
+@import "styleRJ/jumbotron";//巨幕
+
+@import "styleRJ/thumbnails";//缩略图
+@import "styleRJ/alerts";//警告框
+@import "styleRJ/progress-bars";//进度条
+@import "styleRJ/media";//媒体对象
+@import "styleRJ/list-group";//列表组
+@import "styleRJ/panels";//面板
+@import "styleRJ/responsive-embed";//具有响应式特性的嵌入内容
+@import "styleRJ/wells";//well效果
+@import "styleRJ/close";//关闭按钮图标
+
+// Components w/ JavaScript
+@import "styleRJ/modals";//模态框
+@import "styleRJ/tooltip";//工具提示
+@import "styleRJ/popovers";//弹出框
+@import "styleRJ/carousel";//轮播
+
+// Utility classes 实用工具类
+@import "styleRJ/utilities";//实用工具类
+@import "styleRJ/responsive-utilities";//响应式工具类
+
+
+
+//去除的样式
+/*
+@import "styleRJ/navs";//导航
+@import "styleRJ/navbar";//导航条
+*/
+
+

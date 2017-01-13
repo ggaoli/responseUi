@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>栅格框架</title>
+    <link href="../style/styleRJ.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="dom/docs.min.css">
+    <style>
+        h4 {
+            margin-top: 25px;
+        }
+        .row {
+            margin-bottom: 20px;
+        }
+        .row .row {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+        [class*="col-"] {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            background-color: #f7f7f7;
+            border: 1px solid rgba(86,61,124,.2);
+        }
+
+        hr {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1>栅格框架 grid布局</h1>
+        <p class="lead">基本网格布局demo，快速熟悉</p>
+    </div>
+    <h3>简介</h3>
+    <p>栅格系统用于通过一系列的行（row）与列（column）的组合来创建页面布局，你的内容就可以放入这些创建好的布局中。下面就介绍一下 Bootstrap 栅格系统的工作原理：</p>
+    <ul>
+        <li>“行（row）”必须包含在 .container （固定宽度）或 .container-fluid （100% 宽度）中，以便为其赋予合适的排列（aligment）和内补（padding）。</li>
+        <li>通过“行（row）”在水平方向创建一组“列（column）”。</li>
+        <li>你的内容应当放置于“列（column）”内，并且，只有“列（column）”可以作为行（row）”的直接子元素。</li>
+        <li>类似 .row 和 .col-xs-4 这种预定义的类，可以用来快速创建栅格布局。Bootstrap 源码中定义的 mixin 也可以用来创建语义化的布局。</li>
+        <li>通过为“列（column）”设置 padding 属性，从而创建列与列之间的间隔（gutter）。通过为 .row 元素设置负值 margin 从而抵消掉为 .container 元素设置的 padding，也就间接为“行（row）”所包含的“列（column）”抵消掉了padding。</li>
+        <li>如果一“行（row）”中包含了的“列（column）”大于 12，多余的“列（column）”所在的元素将被作为一个整体另起一行排列。</li>
+    </ul>
+    <h3>栅格参数</h3>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th></th>
+                <th>
+                    超小屏幕
+                    <small>手机 (&lt;768px)</small>
+                </th>
+                <th>
+                    小屏幕
+                    <small>平板 (≥768px)</small>
+                </th>
+                <th>
+                    中等屏幕
+                    <small>桌面显示器 (≥992px)</small>
+                </th>
+                <th>
+                    大屏幕
+                    <small>大桌面显示器 (≥1200px)</small>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th class="text-nowrap">栅格系统行为</th>
+                <td>总是水平排列</td>
+                <td colspan="3">开始是堆叠在一起的，当大于这些阈值时将变为水平排列C</td>
+            </tr>
+            <tr>
+                <th class="text-nowrap"><code>.container</code> 最大宽度</th>
+                <td>None （自动）</td>
+                <td>750px</td>
+                <td>970px</td>
+                <td>1170px</td>
+            </tr>
+            <tr>
+                <th class="text-nowrap">类前缀</th>
+                <td><code>.col-xs-</code></td>
+                <td><code>.col-sm-</code></td>
+                <td><code>.col-md-</code></td>
+                <td><code>.col-lg-</code></td>
+            </tr>
+            <tr>
+                <th class="text-nowrap">列（column）数</th>
+                <td colspan="4">12</td>
+            </tr>
+            <tr>
+                <th class="text-nowrap">最大列（column）宽</th>
+                <td class="text-muted">自动</td>
+                <td>~62px</td>
+                <td>~81px</td>
+                <td>~97px</td>
+            </tr>
+            <tr>
+                <th class="text-nowrap">槽（gutter）宽</th>
+                <td colspan="4">30px （每列左右均有 15px）</td>
+            </tr>
+            <tr>
+                <th class="text-nowrap">可嵌套</th>
+                <td colspan="4">是</td>
+            </tr>
+            <tr>
+                <th class="text-nowrap">偏移（Offsets）</th>
+                <td colspan="4">是</td>
+            </tr>
+            <tr>
+                <th class="text-nowrap">列排序</th>
+                <td colspan="4">是</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <h3>媒体查询</h3>
+    <div class="highlight">
+        <pre>
+            <code class="scss">
+                <span class="cm">/* 超小屏幕（手机，小于 768px） */</span>
+                <span class="cm">/* 没有任何媒体查询相关的代码，因为这在 Bootstrap 中是默认的（还记得 Bootstrap 是移动设备优先的吗？） */</span>
+
+                <span class="cm">/* 小屏幕（平板，大于等于 768px） */</span>
+                <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="nd">:</span> <span class="o">@</span><span class="nt">screen-sm-min</span><span class="o">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+
+                <span class="cm">/* 中等屏幕（桌面显示器，大于等于 992px） */</span>
+                <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="nd">:</span> <span class="o">@</span><span class="nt">screen-md-min</span><span class="o">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+
+                <span class="cm">/* 大屏幕（大桌面显示器，大于等于 1200px） */</span>
+                <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="nd">:</span> <span class="o">@</span><span class="nt">screen-lg-min</span><span class="o">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+            </code>
+        </pre>
+    </div>
+
+    <h3>布局容器</h3>
+    <p>
+        需要为页面内容和栅格系统包裹一个 .container 容器。我们提供了两个作此用处的类。注意，由于 padding 等属性的原因，这两种 容器类不能互相嵌套。
+        .container 类用于固定宽度并支持响应式布局的容器。
+    </p>
+    <p>.container-fluid 类用于 100% 宽度，占据全部视口（viewport）的容器。</p>
+
+
+    <h3>三个相同的列</h3>
+    <p>
+        Get three columns
+        <strong>从桌面和开始扩展到大型桌面</strong>.
+        下面的平板电脑和移动设备上,列会自动堆栈
+    </p>
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+    </div>
+
+    <h3>三个不平等的列</h3>
+    <p>Get three columns <strong>从桌面和开始扩展到大型桌面</strong> 不同的宽度.记住,网格列应该为一行达十二块.</p>
+    <div class="row">
+        <div class="col-md-3">.col-md-3</div>
+        <div class="col-md-6">.col-md-6</div>
+        <div class="col-md-3">.col-md-3</div>
+    </div>
+
+    <h3>两列</h3>
+    <p>Get two columns <strong>从桌面和开始扩展到大型桌面</strong>.</p>
+    <div class="row">
+        <div class="col-md-8">.col-md-8</div>
+        <div class="col-md-4">.col-md-4</div>
+    </div>
+
+    <h3>全宽,单一的列</h3>
+    <p class="text-warning">宽屏元素不需要应用网格.</p>
+
+    <hr>
+
+    <h3>列内嵌套行</h3>
+    <p>每个文档, 嵌套很容易，只要把一排列放在在一个已有的列当中就好. 这两列 <strong>从桌面和开始扩展到大型桌面</strong>, 在col-md-8中放置一行，并且这一行在分成两个相同的列。</p>
+    <p>在移动设备上，这些列将堆栈</p>
+    <div class="row">
+        <div class="col-md-8">
+            .col-md-8
+            <div class="row">
+                <div class="col-md-6">.col-md-6</div>
+                <div class="col-md-6">.col-md-6</div>
+            </div>
+        </div>
+        <div class="col-md-4">.col-md-4</div>
+    </div>
+
+    <hr>
+
+    <h3>Mixed:移动端和PC端</h3>
+    <p>网格系统有四个类型的类: xs (phones), sm (tablets), md (desktops), and lg (larger desktops). 您可以使用这些类的任何组合来创建更动态和灵活的布局.</p>
+    <p>每一层的类尺度, 意思如果你打算设置相同的宽度为xs和sm,您只需要指定xs.</p>
+    <div class="row">
+        <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">.col-xs-6</div>
+        <div class="col-xs-6">.col-xs-6</div>
+    </div>
+
+    <hr>
+
+    <h3>Mixed: 手机、平板、桌面</h3>
+    <p></p>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-lg-8">.col-xs-12 .col-sm-6 .col-lg-8</div>
+        <div class="col-xs-6 col-lg-4">.col-xs-6 .col-lg-4</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+    </div>
+
+    <hr>
+
+    <h3>Column clearing</h3>
+    <p><a href="http://getbootstrap.com/css/#grid-responsive-resets">Clear floats</a> at specific breakpoints to prevent awkward wrapping with uneven content.</p>
+    <div class="row">
+        <div class="col-xs-6 col-sm-3">
+            .col-xs-6 .col-sm-3
+            <br>
+            Resize your viewport or check it out on your phone for an example.
+        </div>
+        <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+
+        <!-- Add the extra clearfix for only the required viewport -->
+        <div class="clearfix visible-xs"></div>
+
+        <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+        <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+    </div>
+
+    <hr>
+
+    <h3>列偏移 offset</h3>
+    <p>使用 .col-md-offset-* 类可以将列向右侧偏移。这些类实际是通过使用 * 选择器为当前元素增加了左侧的边距（margin）。</p>
+    <div class="row">
+        <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+        <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0">.col-sm-5 .col-sm-offset-2 .col-md-6 .col-md-offset-0</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
+        <div class="col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-0">.col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0</div>
+    </div>
+
+    <hr>
+
+    <h3>列排序 push pull</h3>
+    <p>通过使用 .col-md-push-* 和 .col-md-pull-* 类就可以很容易的改变列（column）的顺序。</p>
+    <div class="row">
+        <div class="col-md-9 col-md-push-3">.col-md-9 .col-md-push-3</div>
+        <div class="col-md-3 col-md-pull-9">.col-md-3 .col-md-pull-9</div>
+    </div>
+
+
+</div> <!-- /container -->
+
+</body>
+</html>

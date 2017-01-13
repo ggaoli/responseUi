@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>具有响应式特性的嵌入内容</title>
+    <link href="../style/styleRJ.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="dom/docs.min.css">
+
+</head>
+
+<body>
+<div class="container">
+    <div class="bs-docs-section">
+        <h1 id="responsive-embed" class="page-header">具有响应式特性的嵌入内容</h1>
+
+        <p>根据被嵌入内容的外部容器的宽度，自动创建一个固定的比例，从而让浏览器自动确定视频或 slideshow 的尺寸，能够在各种设备上缩放。</p>
+        <p>这些规则被直接应用在 <code>&lt;iframe&gt;</code>、<code>&lt;embed&gt;</code>、<code>&lt;video&gt;</code> 和 <code>&lt;object&gt;</code> 元素上。如果你希望让最终样式与其他属性相匹配，还可以明确地使用一个派生出来的 <code>.embed-responsive-item</code> 类。</p>
+        <p><strong>超级提示：</strong> 不需要为 <code>&lt;iframe&gt;</code> 元素设置 <code>frameborder="0"</code> 属性，因为我们已经替你这样做了！</p>
+        <div class="bs-example">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="//www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen=""></iframe>
+            </div>
+        </div>
+        <div class="zero-clipboard"><span class="btn-clipboard">Copy</span></div><div class="highlight"><pre><code class="html"><span class="c">&lt;!-- 16:9 aspect ratio --&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"embed-responsive embed-responsive-16by9"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;iframe</span> <span class="na">class=</span><span class="s">"embed-responsive-item"</span> <span class="na">src=</span><span class="s">"..."</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+
+        <span class="c">&lt;!-- 4:3 aspect ratio --&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"embed-responsive embed-responsive-4by3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;iframe</span> <span class="na">class=</span><span class="s">"embed-responsive-item"</span> <span class="na">src=</span><span class="s">"..."</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    </code></pre></div>
+    </div>
+</div>
+
+
+</body>
+</html>
+
+
+

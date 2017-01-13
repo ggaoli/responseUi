@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>按钮式下拉菜单</title>
+    <link href="../style/styleRJ.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="dom/docs.min.css">
+    <script src="dom/jquery-1.9.1.min.js"></script>
+    <script src="dom/bootstrap.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="bs-docs-section">
+        <h1 id="btn-dropdowns" class="page-header">按钮式下拉菜单</h1>
+
+        <p class="lead">把任意一个按钮放入 <code>.btn-group</code> 中，然后加入适当的菜单标签，就可以让按钮作为菜单的触发器了。</p>
+
+        <div class="bs-callout bs-callout-danger">
+            <h4>插件依赖</h4>
+            <p>按钮式下拉菜单依赖<a href="../javascript/#dropdowns">下拉菜单插件</a> ，因此需要将此插件包含在你所使用的 Bootstrap 版本中。</p>
+        </div>
+
+        <h3 id="btn-dropdowns-single">单按钮下拉菜单</h3>
+        <p>只要改变一些基本的标记，就能把按钮变成下拉菜单的开关。</p>
+        <div class="bs-example">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Default <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div><!-- /btn-group -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Primary <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div><!-- /btn-group -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">Success <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div><!-- /btn-group -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">Info <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div><!-- /btn-group -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Warning <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div><!-- /btn-group -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Danger <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div><!-- /btn-group -->
+        </div>
+
+
+        <h3 id="btn-dropdowns-split">分裂式按钮下拉菜单</h3>
+        <p>相似地，分裂式按钮下拉菜单也需要同样的改变一些标记，但只是多一个分开的按钮。</p>
+        <div class="bs-example">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default">Default</button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div><!-- /btn-group -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div><!-- /btn-group -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div><!-- /btn-group -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div><!-- /btn-group -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div><!-- /btn-group -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div><!-- /btn-group -->
+        </div>
+
+        <h3 id="btn-dropdowns-sizing">尺寸</h3>
+        <p>按钮式下拉菜单适用所有尺寸的按钮。</p>
+        <div class="bs-example">
+            <div class="btn-toolbar" role="toolbar">
+                <div class="btn-group">
+                    <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+                        Large button <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </div><!-- /btn-group -->
+            </div><!-- /btn-toolbar -->
+            <div class="btn-toolbar" role="toolbar">
+                <div class="btn-group">
+                    <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+                        Small button <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </div><!-- /btn-group -->
+            </div><!-- /btn-toolbar -->
+            <div class="btn-toolbar" role="toolbar">
+                <div class="btn-group">
+                    <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+                        Extra small button <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </div><!-- /btn-group -->
+            </div><!-- /btn-toolbar -->
+        </div><!-- /example -->
+
+
+        <h3 id="btn-dropdowns-dropup">向上弹出式菜单</h3>
+        <p>给父元素添加 <code>.dropup</code> 类就能使触发的下拉菜单朝上方打开。</p>
+        <div class="bs-example">
+            <div class="btn-toolbar" role="toolbar">
+                <div class="btn-group dropup">
+                    <button type="button" class="btn btn-default">Dropup</button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </div><!-- /btn-group -->
+                <div class="btn-group dropup">
+                    <button type="button" class="btn btn-primary">Right dropup</button>
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </div><!-- /btn-group -->
+            </div>
+        </div><!-- /example -->
+
+    </div>
+
+
+</div>
+
+</body>
+</html>
